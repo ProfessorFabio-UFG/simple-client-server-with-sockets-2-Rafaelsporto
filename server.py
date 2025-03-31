@@ -8,19 +8,24 @@ s.listen(1)           #-
 while True:                # forever
   data = conn.recv(1024)   # receive data from client
   if not data: break       # stop if client stopped
-  entrada = bytes.decode(data))
+  entrada = bytes.decode(data)
   entrada = str.split(str(entrada))
-  if len(entrada) = 3:
+  if len(entrada) == 3:
     ope, x, y= entrada
     x = float(x)
     y = float(y)
   if (ope == "add"):
-    saida = a+b
+    saida = x+y
   if (ope == "subtract"):
-    saida = a-b
-  if (ope == "multipli"):
-    saida = a*b
-  if (ope == "add"):
-    saida = a/b
-  conn.send(str.encode(bytes.decode(data)+"*")) # return sent data plus an "*"
+    saida = x-y
+  if (ope == "multiply"):
+    saida = x*y
+  if (ope == "divide"):
+    if y==0:
+      saida="Erro"
+    else:
+      saida=x/y
+  else:
+    saida="Entradas inválidas"
+  conn.send(str.encode(str(saida))) # return sent data, com operações feitas
 conn.close()               # close the connection
