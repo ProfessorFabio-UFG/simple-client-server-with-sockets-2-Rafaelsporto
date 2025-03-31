@@ -8,3 +8,5 @@ Este template corresponde ao exemplo da Fig. 2.3 do livro. O exercício consiste
 Tarefa individual.
 
 Incluir um Readme descritivo do sistema implementado.
+
+Sistema de calculadora. (operação primeiro_valor segundo_valor)
