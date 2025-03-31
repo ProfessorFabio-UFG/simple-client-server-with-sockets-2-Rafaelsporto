@@ -16,11 +16,11 @@ while True:                # forever
     y = float(y)
   if (ope == "add"):
     saida = x+y
-  if (ope == "subtract"):
+  elif (ope == "subtract"):
     saida = x-y
-  if (ope == "multiply"):
+  elif (ope == "multiply"):
     saida = x*y
-  if (ope == "divide"):
+  elif (ope == "divide"):
     if y==0:
       saida="Erro"
     else:
